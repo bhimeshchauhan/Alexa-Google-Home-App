@@ -26,16 +26,20 @@ app.use(
 
 app.setHandler({
     LAUNCH() {
-        return this.toIntent('HelloWorldIntent');
+        return this.toIntent('bhimeshsayshi');
     },
 
     HelloWorldIntent() {
-        this.ask('Hello World! What\'s your name?', 'Please tell me your name.');
+        this.ask('Hi, What\'s your name?');
     },
 
+    bhimeshIntent() {
+        const sum = parseInt(this.$inputs.firstnum.value) + parseInt(this.$inputs.secondnum.value)
+        this.tell('Sum is ' + sum);
+    },
     MyNameIsIntent() {
         this.tell('Hey ' + this.$inputs.name.value + ', nice to meet you!');
-    },
+    }
 });
 
 module.exports.app = app;

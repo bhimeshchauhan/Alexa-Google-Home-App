@@ -1,10 +1,32 @@
 {
-	"invocation": "my test app",
+	"invocation": "bhimesh-hi-app",
 	"intents": [
+		{
+			"name": "bhimeshIntent",
+			"phrases": [
+				"{firstnum}, {secondnum}"
+			],
+			"inputs": [
+				{
+					"name": "firstnum",
+					"type": {
+						"alexa": "AMAZON.NUMBER",
+						"dialogflow": "@sys.given-name"
+					}
+				},
+				{
+					"name": "secondnum",
+					"type": {
+						"alexa": "AMAZON.NUMBER",
+						"dialogflow": "@sys.given-name"
+					}
+				}
+			]
+		},
 		{
 			"name": "HelloWorldIntent",
 			"phrases": [
-				"hello",
+				"no hello",
 				"say hello",
 				"say hello world"
 			]
